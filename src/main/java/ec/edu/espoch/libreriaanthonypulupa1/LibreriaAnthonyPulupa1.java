@@ -18,7 +18,7 @@ public class LibreriaAnthonyPulupa1 {
     public static void main(String[] args) {
         Biblioteca biblioteca = new Biblioteca();
 
-        // Agregar libros usando autores de la estructura estática
+    
         biblioteca.agregarLibro(new Libros("Cien años de soledad",
                 biblioteca.obtenerAutorPorPosicion(0), "Realismo mágico", 29.90));
         biblioteca.agregarLibro(new Libros("La casa de los espíritus",
@@ -30,7 +30,7 @@ public class LibreriaAnthonyPulupa1 {
         biblioteca.agregarLibro(new Libros("El laberinto de la soledad",
                 biblioteca.obtenerAutorPorPosicion(4), "Ensayo", 18.20));
 
-        // Mostrar catálogo completo
+     
         biblioteca.mostrarLibros();
 
         System.out.println();

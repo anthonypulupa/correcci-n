@@ -18,7 +18,7 @@ public class Biblioteca {
     private List<Libros> catalogo;
 
     public Biblioteca() {
-        // Inicializa autores estáticos
+        
         autoresEstaticos = new Autores[5];
         autoresEstaticos[0] = new Autores("Gabriel García Márquez", "Colombiano");
         autoresEstaticos[1] = new Autores("Isabel Allende", "Chilena");
@@ -26,7 +26,6 @@ public class Biblioteca {
         autoresEstaticos[3] = new Autores("Mario Vargas Llosa", "Peruano");
         autoresEstaticos[4] = new Autores("Octavio Paz", "Mexicano");
 
-        // Inicializa estructura dinámica vacía
         catalogo = new ArrayList<>();
     }
 
@@ -34,9 +33,6 @@ public class Biblioteca {
         return autoresEstaticos;
     }
 
-    /**
-     * Agrega un libro al catálogo dinámico.
-     */
     public void agregarLibro(Libros libro) {
         if (libro == null) {
             throw new IllegalArgumentException("No se puede agregar un libro nulo.");
@@ -44,9 +40,6 @@ public class Biblioteca {
         catalogo.add(libro);
     }
 
-    /**
-     * Muestra todos los libros agregados al catálogo.
-     */
     public void mostrarLibros() {
         System.out.println("=========================================");
         System.out.println("CATÁLOGO DE LIBROS - Total: " + catalogo.size());
@@ -63,9 +56,6 @@ public class Biblioteca {
         }
     }
 
-    /**
-     * Retorna un autor según su posición en la estructura estática.
-     */
     public Autores obtenerAutorPorPosicion(int pos) {
         if (pos < 0 || pos >= autoresEstaticos.length) {
             throw new IndexOutOfBoundsException("Posición de autor fuera de rango (0–4).");
